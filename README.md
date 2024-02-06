@@ -67,7 +67,6 @@ Once the cluster restarts and normal operation resumes, remember to remove --wai
 
 ## Step 3: Update your validator version
 
-**THIS VERSION ISN'T READY YET, HALT HERE FOR NOW**
 
 Download and install/build the latest Solana version - this is important, you HAVE to use this version to restart:
 
