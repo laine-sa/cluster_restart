@@ -63,6 +63,8 @@ Download and install/build the latest Solana version - this is important, you HA
 
 `Solana v1.17.19`
 
+If you are running jito-solana please use the respective jito-solana release for v1.17.19 or revert to Solana Labs client for this restart if it is not available.
+
 ## Step 4: Start your validator
 As it boots, it will load the snapshot for slot PENDING and wait for 80% of the stake to come online before producing/validating new blocks. 
 
