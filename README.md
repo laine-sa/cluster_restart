@@ -38,7 +38,7 @@ solana-ledger-tool --ledger <ledger-path> create-snapshot \
  
 The final line of output should be “Shred version: PENDING”, and this snapshot file should now exist: 
 
-`ledger/snapshot-PENDING.tar.zst``
+`ledger/snapshot-PENDING.tar.zst`
 
 Check your ledger/ directory to ensure that you have no snapshot newer than ledger/snapshot-PENDING.tar.zst This is very unlikely, but if found should be removed - please post on Discord if you were to find a newer snapshot! Snapshots older than ledger/snapshot-PENDING.tar.zst should not be removed.
 
