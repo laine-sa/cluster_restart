@@ -4,6 +4,7 @@ Block production on Solana Mainnet-Beta has halted at approximately 10:00 UTC on
 
 Investigations are underway, a consensus on restart has not yet been reached. If a restart is needed this document is being updated with instructions as they become available.
 
+**THIS GUIDE IS INCOMPLETE PENDING CONFIRMATION OF EXPECTED BANK HASH AND SHRED VERSION - ONLY COMPLETE STEP 1 FOR NOW**
 
 ## Identify your highest optimistic slot:
 
