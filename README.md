@@ -58,7 +58,12 @@ NOTE: If you receive “Error: Slot 246464040 is not available”, please see ap
 
 Once the cluster restarts and normal operation resumes, remember to remove --wait-for-supermajority and --expected-bank-hash before the next update or restart. They are only required for the restart. You can also go back to your old known-validators at that point.
 
-## Step 3: Start your validator
+## Step 3: Update your validator version
+Download and install/build the latest Solana version - this is important, you HAVE to use this version to restart:
+
+`Solana v1.17.19`
+
+## Step 4: Start your validator
 As it boots, it will load the snapshot for slot PENDING and wait for 80% of the stake to come online before producing/validating new blocks. 
 
 To confirm your restarted validator is correctly waiting for 80% stake, look for this periodic log message to confirm it is waiting:
