@@ -111,7 +111,7 @@ Add these arguments to restart:
  --expected-bank-hash 2QEvYhBgeWPJbC84fMTTK9NgntqiUAWiBEBf21rtTmng \
 ```
 
-Additional snapshot sources:
+## Additional snapshot sources:
 If you follow this add back –no-snapshot-fetch, you can remove old snapshots, none should have a higher slot than the one you download.
 
 You can use these known validators:
