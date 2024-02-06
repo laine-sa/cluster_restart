@@ -29,7 +29,7 @@ This document assumes your ledger directory is called ledger/.  If not then adju
 Use the ledger tool to create a new snapshot at slot 246464040, replacing the two instances of <ledger path> to your actual ledger path:
 
 ```
-solana-ledger-tool --ledger <ledger-path> create-snapshot \
+solana-ledger-tool --ledger <ledger-path> create-snapshot 246464040 \
 --snapshot-archive-path  <snapshot-path> \
 --hard-fork 246464040 \
 ```
