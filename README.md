@@ -65,6 +65,9 @@ NOTE: If you receive “Error: Slot 246464040 is not available”, please see ap
 Once the cluster restarts and normal operation resumes, remember to remove --wait-for-supermajority and --expected-bank-hash before the next update or restart. They are only required for the restart. You can also go back to your old known-validators at that point.
 
 ## Step 3: Update your validator version
+
+**THIS VERSION ISN'T READY YET, HALT HERE FOR NOW**
+
 Download and install/build the latest Solana version - this is important, you HAVE to use this version to restart:
 
 `Solana v1.17.19`
