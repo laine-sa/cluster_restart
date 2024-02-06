@@ -13,12 +13,11 @@ Investigations are underway, a consensus on restart has not yet been reached. If
 ^ Find this by grepping your logs for “optimistic_slot”:
 
 
-grep "optimistic_slot slot" /path/to/log/file | tail
+`grep "optimistic_slot slot" /path/to/log/file | tail`
 
 The highest slot might not be the last to appear in your logs, identify the highest of those printed.
 
 Note: If your last confirmed slot is lower than that the one listed above, this is likely your node crashed before it was able to observe the latest supermajority. In this case, update according to step 2 then proceed to the Appendix.
-
 
 Important: DO NOT delete your ledger directory.
 
