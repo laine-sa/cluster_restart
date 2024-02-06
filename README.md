@@ -105,8 +105,8 @@ For this you need to remove –no-snapshot-fetch if present.
 Add these arguments to restart:
 ```
  --wait-for-supermajority 246464040 \
- --expected-shred-version PENDING \
- --expected-bank-hash PENDING \
+ --expected-shred-version 50093 \
+ --expected-bank-hash 2QEvYhBgeWPJbC84fMTTK9NgntqiUAWiBEBf21rtTmng \
 ```
 
 Additional snapshot sources:
