@@ -40,11 +40,11 @@ If you have a custom accounts path add `--accounts <PATH_TO_ACCOUNTS> \` before 
 The final line of output should be 
 
 ```
-Successfully created snapshot for slot 246464040, hash PENDING: /path/to/ledger/PENDING.tar.zst
-Shred version: PENDING
+Successfully created snapshot for slot 246464040, hash 2QEvYhBgeWPJbC84fMTTK9NgntqiUAWiBEBf21rtTmng:: /path/to/ledger/snapshot-246464040-9kmqknr1D8pQXn92dWMDWvfZ9nwzgxRQ6JnbUrG3KN4F.tar.zst
+Shred version: 50093
 ``` 
 
-Check your ledger/ directory to ensure that you have no snapshot newer than `snapshot-PENDING.tar.zst` This is very unlikely, but if found should be removed - please post on Discord if you were to find a newer snapshot! Snapshots older than `snapshot-PENDING.tar.zst` should not be removed.
+Check your ledger/ directory to ensure that you have no snapshot newer than `snapshot-246464040-9kmqknr1D8pQXn92dWMDWvfZ9nwzgxRQ6JnbUrG3KN4F.tar.zst` This is very unlikely, but if found should be removed - please post on Discord if you were to find a newer snapshot! Snapshots older than `snapshot-246464040-9kmqknr1D8pQXn92dWMDWvfZ9nwzgxRQ6JnbUrG3KN4F.tar.zst` should not be removed.
 
 NOTE: You may need to move the created snapshot from your ledger directory to your snapshots directory if you have a custom snapshot directory
 
@@ -57,8 +57,8 @@ NOTE: If you receive “Error: Slot 246464040 is not available”, please see ap
 --wait-for-supermajority 246464040 \
 --no-snapshot-fetch \
 --no-genesis-fetch \
---expected-bank-hash PENDING\
---expected-shred-version PENDING \
+--expected-bank-hash 2QEvYhBgeWPJbC84fMTTK9NgntqiUAWiBEBf21rtTmng \
+--expected-shred-version 50093 \
 
 (Remove the previous value of “--expected-shred-version“ if present). 
 
@@ -70,12 +70,12 @@ Once the cluster restarts and normal operation resumes, remember to remove --wai
 
 Download and install/build the latest Solana version - this is important, you HAVE to use this version to restart:
 
-`Solana v1.17.19`
+`Solana v1.17.20`
 
-If you are running jito-solana please use the respective jito-solana release for v1.17.19 or revert to Solana Labs client for this restart if it is not available.
+If you are running jito-solana please use the respective jito-solana release for v1.17.20 or revert to Solana Labs client for this restart if it is not available.
 
 ## Step 4: Start your validator
-As it boots, it will load the snapshot for slot PENDING and wait for 80% of the stake to come online before producing/validating new blocks. 
+As it boots, it will load the snapshot for slot 246464040 and wait for 80% of the stake to come online before producing/validating new blocks. 
 
 To confirm your restarted validator is correctly waiting for 80% stake, look for this periodic log message to confirm it is waiting:
 INFO  solana_core::validator] Waiting for 80% of activated stake at slot 246464040 to be in gossip...
