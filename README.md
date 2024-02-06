@@ -32,10 +32,11 @@ Use the ledger tool to create a new snapshot at slot 246464040, replacing the tw
 ```
 solana-ledger-tool --ledger <ledger-path> create-snapshot \
 --snapshot-archive-path  <snapshot-path> \
---accounts <PATH_TO_ACCOUNTS> \
 --hard-fork 246464040 \
 ```
  
+If you have a custom accounts path add `--accounts <PATH_TO_ACCOUNTS> \` before `--hard-fork`
+
 The final line of output should be 
 
 ```
