@@ -114,4 +114,10 @@ Add these arguments to restart:
 Additional snapshot sources:
 If you follow this add back –no-snapshot-fetch, you can remove old snapshots, none should have a higher slot than the one you download.
 
+You can use these known validators:
+
+```
+--known-validator RBFiUqjYuy4mupzZaU96ctXJBy23sRBRsL3KivDAsFM \
+```
+
 
