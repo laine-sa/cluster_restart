@@ -36,11 +36,14 @@ solana-ledger-tool --ledger <ledger-path> create-snapshot \
 --hard-fork 246464040 \
 ```
  
-The final line of output should be “Shred version: PENDING”, and this snapshot file should now exist: 
+The final line of output should be 
 
-`ledger/snapshot-PENDING.tar.zst`
+```
+Successfully created snapshot for slot 246464040, hash PENDING: /path/to/ledger/PENDING.tar.zst
+Shred version: PENDING
+``` 
 
-Check your ledger/ directory to ensure that you have no snapshot newer than ledger/snapshot-PENDING.tar.zst This is very unlikely, but if found should be removed - please post on Discord if you were to find a newer snapshot! Snapshots older than ledger/snapshot-PENDING.tar.zst should not be removed.
+Check your ledger/ directory to ensure that you have no snapshot newer than `snapshot-PENDING.tar.zst` This is very unlikely, but if found should be removed - please post on Discord if you were to find a newer snapshot! Snapshots older than `snapshot-PENDING.tar.zst` should not be removed.
 
 NOTE: You may need to move the created snapshot from your ledger directory to your snapshots directory if you have a custom snapshot directory
 
