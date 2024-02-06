@@ -53,6 +53,8 @@ NOTE: If you receive “Error: Slot 246464040 is not available”, please see ap
 ## Step 2: Adjust your validator command-line arguments, temporarily for this restart to include:
 (--known-validators aren’t needed if you have your own local snapshot and have set –no-genesis-fetch as your validator won’t be downloading anything, you can omit those arguments in this case)
 
+**If you use a have a hot failover setup ensure you start with the correct identity!**
+
 ```
 --wait-for-supermajority 246464040 \
 --no-snapshot-fetch \
