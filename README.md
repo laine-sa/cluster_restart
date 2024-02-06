@@ -41,7 +41,7 @@ Check your ledger/ directory to ensure that you have no snapshot newer than ledg
 
 NOTE: You may need to move the created snapshot from your ledger directory to your snapshots directory if you have a custom snapshot directory
 
-NOTE: If you receive “Error: Slot PENDING is not available”, please see appendix
+NOTE: If you receive “Error: Slot 246464040 is not available”, please see appendix
 
 
 ## Step 2: Adjust your validator command-line arguments, temporarily for this restart to include:
@@ -57,18 +57,16 @@ NOTE: If you receive “Error: Slot PENDING is not available”, please see appe
 
 Once the cluster restarts and normal operation resumes, remember to remove --wait-for-supermajority and --expected-bank-hash before the next update or restart. They are only required for the restart. You can also go back to your old known-validators at that point.
 
-(see next page for step 4)
-
 ## Step 3: Start your validator
 As it boots, it will load the snapshot for slot PENDING and wait for 80% of the stake to come online before producing/validating new blocks. 
 
 To confirm your restarted validator is correctly waiting for 80% stake, look for this periodic log message to confirm it is waiting:
-INFO  solana_core::validator] Waiting for 80% of activated stake at slot PENDING to be in gossip...
+INFO  solana_core::validator] Waiting for 80% of activated stake at slot 246464040 to be in gossip...
 
 And if you have RPC enabled, ask it repeated for the current slot:
 `solana --url http://127.0.0.1:8899 slot``
 
-Any number other than PENDING means you did not complete the steps correctly.
+Any number other than 246464040 means you did not complete the steps correctly.
 
 Once started you should see log entries for “Activate stake” visible in gossip and “waiting for 80% of stake” to be visible. You can track these to see how stake progresses.
 
@@ -77,21 +75,22 @@ If you couldn’t produce your snapshot locally follow appendix on next page bel
 
 
 
-Appendix: Resolution if you did not preserve your ledger or your last optimistically confirmed slot is below PENDING
+## Appendix: Resolution if you did not preserve your ledger or your last optimistically confirmed slot is below 246464040
 
-NOT RECOMMENDED - this resolution should only be attempted if your ledger/ directory is unavailable or you are unable to produce a snapshot for PENDING.
+NOT RECOMMENDED - this resolution should only be attempted if your ledger/ directory is unavailable or you are unable to produce a snapshot for 246464040.
 
-ONLY IF your ledger history is corrupt or otherwise unavailable and your last confirmed slot is lower than 153139220, follow these instructions to get a new snapshot:
+ONLY IF your ledger history is corrupt or otherwise unavailable and your last confirmed slot is lower than 246464040, follow these instructions to get a new snapshot:
 
 Your validator will need to download a new snapshot from one of the known validators. Alternative snapshot download methods are also provided further below. A snapshot will be verified as valid by the bank hash in the arguments below. 
 
 For this you need to remove –no-snapshot-fetch if present.
 
 Add these arguments to restart:
-	--wait-for-supermajority PENDING \
---expected-shred-version PENDING \
---expected-bank-hash PENDING \
-
+```
+ --wait-for-supermajority 246464040 \
+ --expected-shred-version PENDING \
+ --expected-bank-hash PENDING \
+```
 
 Additional snapshot sources:
 If you follow this add back –no-snapshot-fetch, you can remove old snapshots, none should have a higher slot than the one you download.
