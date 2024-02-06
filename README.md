@@ -30,10 +30,11 @@ This document assumes your ledger directory is called ledger/.  If not then adju
 Use the ledger tool to create a new snapshot at slot 246464040, replacing the two instances of <ledger path> to your actual ledger path:
 
 `
-solana-ledger-tool --ledger <ledger path> create-snapshot 246464040 <ledger path> --hard-fork 246464040
+solana-ledger-tool --ledger <ledger-path> create-snapshot \
+--snapshot-archive-path  <snapshot-path> \
+--accounts <PATH_TO_ACCOUNTS> \
+--hard-fork 246464040 \
 `
-
-Add `--snapshot-archive-path <PATH_TO_SNAPSHOTS>` before “create-snapshot” if you have a separate snapshot dir, and `--accounts <PATH_TO_ACCOUNTS>` before `-–hard-fork` if you have a separate accounts dir
  
 The final line of output should be “Shred version: PENDING”, and this snapshot file should now exist: 
 
