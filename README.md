@@ -125,6 +125,7 @@ wget https://storage.googleapis.com/jito-mainnet/snapshot-246464040-9kmqknr1D8pQ
 wget http://snapshot.rockawayx.com/snapshot-246464040-9kmqknr1D8pQXn92dWMDWvfZ9nwzgxRQ6JnbUrG3KN4F.tar.zst
 wget http://185.101.34.230:8899/snapshot-246464040-9kmqknr1D8pQXn92dWMDWvfZ9nwzgxRQ6JnbUrG3KN4F.tar.zst (Oslo, Norway)
 wget http://45.250.255.103:2504/snapshot-246464040-9kmqknr1D8pQXn92dWMDWvfZ9nwzgxRQ6JnbUrG3KN4F.tar.zst (Tokyo, Japan)
+wget http://45.250.255.154:8080/snapshot-246464040-9kmqknr1D8pQXn92dWMDWvfZ9nwzgxRQ6JnbUrG3KN4F.tar.zst (Tokyo, Japan)
 wget http://169.150.242.31/snapshot-246464040-9kmqknr1D8pQXn92dWMDWvfZ9nwzgxRQ6JnbUrG3KN4F.tar.zst (Zagreb, EU)
 wget https://rpc-proxy-miami.sayori.link/snapshots/snapshot-246464040-9kmqknr1D8pQXn92dWMDWvfZ9nwzgxRQ6JnbUrG3KN4F.tar.zst (Miami, USA)
 ```
