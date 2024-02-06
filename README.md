@@ -1,11 +1,11 @@
-#Solana Mainnet-Beta Cluster Restart 6 February 2024
+# Solana Mainnet-Beta Cluster Restart 6 February 2024
 
 You need the following shred version and expected-bank-hash to join the cluster:
 
 PENDING
 
 
-##Identify your highest optimistic slot:
+## Identify your highest optimistic slot:
 
 Highest optimistically confirmed slot: 246464040
 ^ Find this by grepping your logs for “optimistic_slot”:
