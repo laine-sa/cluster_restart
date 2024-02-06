@@ -5,6 +5,12 @@ Block production on Solana Mainnet-Beta has halted at approximately 10:00 UTC on
 Investigations are underway, a consensus on restart has not yet been reached. If a restart is needed this document is being updated with instructions as they become available.
 
 
+## NETWORK HAS RESTARTED - DISREGARD THESE INSTRUCTIONS
+
+The network has restarted, do not follow these instructions. You need to restart with the correct shred version of 50093.
+
+If you participated in the restart remove the `--wait-for-supermajority` and `--expected-bank-hash` flags now, otherwise your node won't restart.
+
 ## Identify your highest optimistic slot:
 
 **Highest optimistically confirmed slot: 246464040**
