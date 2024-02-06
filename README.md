@@ -122,5 +122,5 @@ You can use these known validators:
 Or download directly:
 ```
 wget https://storage.googleapis.com/jito-mainnet/snapshot-246464040-9kmqknr1D8pQXn92dWMDWvfZ9nwzgxRQ6JnbUrG3KN4F.tar.zst
-
+wget http://snapshot.rockawayx.com/snapshot-246464040-9kmqknr1D8pQXn92dWMDWvfZ9nwzgxRQ6JnbUrG3KN4F.tar.zst
 ```
