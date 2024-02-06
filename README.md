@@ -7,7 +7,9 @@ Investigations are underway, a consensus on restart has not yet been reached. If
 
 ## Identify your highest optimistic slot:
 
-Highest optimistically confirmed slot: 246464040
+**Highest optimistically confirmed slot: 246464040**
+
+
 ^ Find this by grepping your logs for “optimistic_slot”:
 
 
