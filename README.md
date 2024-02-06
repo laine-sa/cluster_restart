@@ -76,19 +76,25 @@ Download and install/build the latest Solana version - this is important, you HA
 
 If you are running jito-solana please use the respective jito-solana release for v1.17.20 or revert to Solana Labs client for this restart if it is not available.
 
-## Step 4: Start your validator
+## Step 4: Start your validator and verify status
 As it boots, it will load the snapshot for slot 246464040 and wait for 80% of the stake to come online before producing/validating new blocks. 
 
 To confirm your restarted validator is correctly waiting for 80% stake, look for this periodic log message to confirm it is waiting:
 INFO  solana_core::validator] Waiting for 80% of activated stake at slot 246464040 to be in gossip...
 
 And if you have RPC enabled, ask it repeated for the current slot:
-`solana --url http://127.0.0.1:8899 slot``
+```
+solana --url http://127.0.0.1:8899 slot
+```
+
+Verify that you have the correct identity configuration with this command
+```
+solana-validator -l /PATH/TO/LEDGER contact-info
+```
 
 Any number other than 246464040 means you did not complete the steps correctly.
 
 Once started you should see log entries for “Activate stake” visible in gossip and “waiting for 80% of stake” to be visible. You can track these to see how stake progresses.
-
 
 If you couldn’t produce your snapshot locally follow appendix on next page below 
 
